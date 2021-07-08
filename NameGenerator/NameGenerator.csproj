@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Title>Random Name Generator</Title>
+    <Description>A simple library for creating random masculine and feminie forenames and surnames.  Ideal for creating test data.</Description>
+    <Copyright>James Millar</Copyright>
+    <PackageId>Sailr.NameGenerator</PackageId>
+    <Authors>James Millar</Authors>
+    <PackageProjectUrl>https://github.com/Distinctlyminty/NameGenerator</PackageProjectUrl>
+    <PackageLicense>https://github.com/Distinctlyminty/NameGenerator/blob/main/LICENSE</PackageLicense>
+    <RepositoryUrl>https://github.com/Distinctlyminty/NameGenerator</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageVersion>1.0.1</PackageVersion>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageLicenseUrl>https://github.com/Distinctlyminty/NameGenerator/blob/main/LICENSE</PackageLicenseUrl>
+    <Owners>James Millar</Owners>
+    <Summary>A simple library for creating random masculine and feminie forenames and surnames. Ideal for creating test data.
+</Summary>
+    <PackOnBuild>true</PackOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType></DebugType>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources.dist.all.last.stripped" />
+    <None Remove="Resources.dist.female.first.stripped" />
+    <None Remove="Resources.dist.male.first.stripped" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.dist.all.last.stripped" />
+    <EmbeddedResource Include="Resources.dist.female.first.stripped" />
+    <EmbeddedResource Include="Resources.dist.male.first.stripped" />
+  </ItemGroup>
+</Project>
